@@ -19,17 +19,17 @@
             function myfunction(){
                 let input = document.getElementById("money").value;
                 document.getElementById("demo").innerHTML='美金: '+input/30.295+' USD'+' 歐元: '+input/32.11+' EUR'+' 日圓: '+input/0.2091+' JPY'+' 韓元: '+input/0.02144+' KRW'+' 澳幣: '+input/19.66+' AUD';          
-
+                //(1) 使用 JS 設計一個匯率轉換計算機並在網頁中以文字說明運用方式，使用者可以在網頁中輸入台幣金額；按下執行計算的按鈕後，網頁上會顯示轉換成美金、歐元、日圓、韓元、澳幣的金額與幣別單位；計算結果呈現的數值至少要顯示到小數點下第 2 位 (50%)
                 if(isNaN(input))
                 {
                     alert('非有效數值重新輸入');
                     document.getElementById("demo").innerHTML=''; 
                     document.getElementById("form").reset();
-                }
+                } //(5) 具備輸入檢查功能，若使用者輸入的內容非有效數值，按下執行計算的按鈕後會跳出警告，並觸發重新開始(reset)功能 (5%)
             }
             function resetForm() {
  	            document.getElementById("form").reset();
-                document.getElementById("demo").innerHTML='';
+                document.getElementById("demo").innerHTML=''; //(4) 具備重新開始(reset)功能的按鈕，讓使用者可以進行全新一輪的計算 (5%)
             }
         </script>
     </body>
