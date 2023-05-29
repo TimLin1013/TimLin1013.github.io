@@ -1,0 +1,22 @@
+input[type=text]{
+  width: 100px;
+  display: block;
+  margin: 20px;
+  background-color: #DFFFDF;
+  color: gray;
+}
+input[type=button]{
+  width: 70px;
+  background-color: black;
+  color: yellow;
+}
+body{
+  background-color: aliceblue;
+}
+p{
+  margin: 20px;
+  color: darkslategrey;
+}
+.demo{
+  color:gray;
+}

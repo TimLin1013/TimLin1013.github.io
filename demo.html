@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>匯率轉換計算機</title>
+        <link rel="stylesheet" href="mystyle.css">
+    </head>
+    <body>
+        
+        <p>輸入台幣金額</p>
+        
+        <form id="form">
+            <input id="money" type="text">   
+            <input type="button" onclick="myfunction()" value="執行計算">
+            <input type="button" onclick="resetForm()" value="重新計算">
+        </form>
+        <br>
+        <p id="demo"></p>
+        <script>
+            function myfunction(){
+                let input = document.getElementById("money").value;
+                document.getElementById("demo").innerHTML='美金: '+input/30.295+' USD'+' 歐元: '+input/32.11+' EUR'+' 日圓: '+input/0.2091+' JPY'+' 韓元: '+input/0.02144+' KRW'+' 澳幣: '+input/19.66+' AUD';          
+
+                if(isNaN(input))
+                {
+                    alert('非有效數值重新輸入');
+                    document.getElementById("demo").innerHTML=''; 
+                    document.getElementById("form").reset();
+                }
+            }
+            function resetForm() {
+ 	            document.getElementById("form").reset();
+                document.getElementById("demo").innerHTML='';
+            }
+        </script>
+    </body>
+</html>
